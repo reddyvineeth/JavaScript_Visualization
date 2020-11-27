@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Artifacia - Dashboard</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.js"></script>
+	</head>
+	<body>
+		<div class="dashboard-container container">
+			<div class="main_container inactive">
+				<div class="col-md-3 left_col left-fix-col">
+         			<div class="left_col scroll-view">
+			            <div class="navbar nav_title" style="border: 0;">
+			              <a href="index.html" class="site_title">
+			              	<img class="pull-left" src="http://artifacia.com/static/images/logo/logo.png">
+			              </a>
+			            </div>
+            			<div class="clearfix"></div>
+            			<br>
+
+			            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+			              <div class="menu_section active">
+			                <ul class="nav side-menu" style="">
+			                  <li class=""><a><i class="fa fa-home"></i> Home <span class=""></span></a>
+			                  
+			                  </li>
+			                  <li><a><i class="fa fa-edit"></i> Forms <span class=""></span></a>
+			                   
+			                  </li>
+			                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class=""></span></a>
+			                   
+			                  </li>
+			                  <li><a><i class="fa fa-table"></i> Tables <span class=""></span></a>
+			   
+			                  </li>
+			                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class=""></span></a>
+			                   
+			                  </li>
+			                  <li><a><i class="fa fa-clone"></i>Layouts <span class=""></span></a>
+			                   
+			                  </li>
+			                </ul>
+			              </div>
+
+			            </div>
+          			</div>
+       			</div>
+				<div class="top_nav">
+          			<div class="nav_menu">
+            			<nav class="" role="navigation">
+              				<div class="nav toggle">
+                				<a id="menu_toggle">
+                					<i class="fa fa-bars"></i>
+                				</a>
+              				</div>
+              				<ul class="nav navbar-nav navbar-right">
+		                		<li class="">
+		                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		                 
+		                   username
+		                  </a>
+		                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+		                    <li><a href="javascript:;"> Profile</a></li>
+		                    <li>
+		                      <a href="javascript:;">
+		                        
+		                        <span>Settings</span>
+		                      </a>
+		                    </li>
+		                    <li><a href="javascript:;">Help</a></li>
+		                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+		                  </ul>
+		                		</li>
+                  			</ul>
+            			</nav>
+          			</div>
+        		</div>
+        		<div class="right_col">
+        			<div class="row general_count">
+        				<div class="col-md-12 col-sm-12 col-xs-12 tile_col" >
+				            <div class="col-md-3 col-sm-4 col-xs-6 stats_tile" style="background: #ffc107;">
+				              <span class="activity"><i class="fa fa-user"></i> Total Users</span>
+				              <div class="count">14560</div>
+				              <span class="activity_since"><i class="green">25% </i> From last Week</span>
+				            </div>
+				            <div class="col-md-3 col-sm-4 col-xs-6 stats_tile" style="background: #00bcd4;">
+				              <span class="activity"><i class="fa fa-clock-o"></i> Average Time</span>
+				              <div class="count">194.60</div>
+				              <span class="activity_since"><i class="green"><i class="fa fa-sort-asc"></i>10% </i> From last Week</span>
+				            </div>
+				            <div class="col-md-3 col-sm-4 col-xs-6 stats_tile" style="background: #26a69a;">
+				              <span class="activity"><i class="fa fa-user"></i> Total Males</span>
+				              <div class="count green">6770</div>
+				              <span class="activity_since"><i class="green"><i class="fa fa-sort-asc"></i>15% </i> From last Week</span>
+				            </div>
+				            <div class="col-md-3 col-sm-4 col-xs-6 stats_tile" style="background: #bdbdbd;">
+				              <span class="activity"><i class="fa fa-user"></i> Total Females</span>
+				              <div class="count">7690</div>
+				              <span class="activity_since"><i class="red"><i class="fa fa-sort-desc"></i>20% </i> From last Week</span>
+				            </div>
+				        </div>    
+			        </div>
+        			<div class="row">
+
+        				<div class="col-md-12 col-sm-12 col-xs-12">
+        					<div class="main_graph">
+        						<div class="row graph_title">
+        							<div class="col-md-6">
+        								<h3>Social Media Activities <small> Visitors</small></h3>
+        							</div>
+        							<div class="col-md-6">
+        								<select class="select-time">
+        									<option vaule="week">Week</option>
+        									<option vaule="month">Month</option>
+        									<option value="years">Last 2 years</option>
+        								</select>
+        							</div>	
+        							<div class="col-md-12 col-sm-12">
+        								<canvas id="canvas-main"></canvas>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="col-md-12 col-sm-12 col-xs-12">
+	        				<div class="notifications-area">
+	        					<div class="col-md-8">
+		        					<h4> Recent Messages </h4>
+		        					<ul class="notifications-list">
+		        						
+		        					</ul>
+		        				</div>
+		        				<div class="col-md-4">
+					                <div class="main_title">
+					                    <h3>Top Performance</h3>
+					                </div>
+
+					                <div class="col-md-12 col-sm-12 col-xs-6">
+					                    <div>
+					                      <p>Facebook Visitors</p>
+					                      <div class="">
+					                        <div class="progress progress_sm" style="width: 100%;">
+					                          <div class="progress-bar bg-facebook"  role="progressbar" data-transitiongoal="80" style="width: 80%;background:#3b5998;" aria-valuenow="79"></div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div>
+					                      <p>Twitter Visitors </p>
+					                      <div class="">
+					                        <div class="progress progress_sm" style="width: 100%;">
+					                          <div class="progress-bar bg-twitter" role="progressbar" data-transitiongoal="60" style="width: 70%;background:#1da1f2;" aria-valuenow="59"></div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                    <div>
+					                      <p>Google Visitors</p>
+					                      <div class="">
+					                        <div class="progress progress_sm" style="width: 100%;">
+					                          <div class="progress-bar bg-google" role="progressbar" data-transitiongoal="40" style="width: 55%;background:#dd4b39;" aria-valuenow="39"></div>
+					                        </div>
+					                      </div>
+					                    </div>
+					                  </div>
+		        				</div>
+	        				</div>
+	        			</div>	
+        				<div class="col-md-12 col-sm-12 col-xs-12">
+        					<div class="sub_graph">
+        						<div class="row graph_title">
+        							<div class="col-md-6 sub-graph-main">
+	        							<div class="col-md-9">
+	        								<h3>Social Media Likes/Comments <small> Registered users.</small></h3>
+	        							</div>
+	        							<div class="col-md-3">
+	        								<select class="select-sub-time">
+	        									<option vaule="week">Week</option>
+	        									<option vaule="month">Month</option>
+	        									<option value="years">Last 2 years</option>
+	        								</select>
+	        							</div>	
+	        							<div class="col-md-12 col-sm-12">
+	        								<canvas id="canvas-sub"></canvas>
+	        							</div>
+	        						</div>	
+	        						<div class="col-md-6 sub-graph-main" style="border-left:1px solid #ddd;">
+	        							<div class="col-md-9">
+	        								<h3>Social Media Post Views <small> New Users.</small></h3>
+	        							</div>
+	        							<div class="col-md-3">
+	        								<select class="select-sub1-time">
+	        									<option vaule="week">Week</option>
+	        									<option vaule="month">Month</option>
+	        									<option value="years">Last 2 years</option>
+	        								</select>
+	        							</div>	
+	        							<div class="col-md-12 col-sm-12">
+	        								<canvas id="canvas-sub1"></canvas>
+	        							</div>
+	        						</div>	
+        						</div>
+        					</div>
+	        			</div>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</body>
+</html>
